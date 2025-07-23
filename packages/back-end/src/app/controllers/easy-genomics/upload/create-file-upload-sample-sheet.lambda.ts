@@ -13,7 +13,7 @@ import { APIGatewayProxyResult, APIGatewayProxyWithCognitoAuthorizerEvent, Handl
 import { LaboratoryService } from '@BE/services/easy-genomics/laboratory-service';
 import { S3Service } from '@BE/services/s3-service';
 
-const SAMPLE_SHEET_CSV_HEADER: string[] = ['sample, fastq_1, fastq_2'];
+const SAMPLE_SHEET_CSV_HEADER: string[] = ['sample,fastq_1,fastq_2'];
 
 const laboratoryService = new LaboratoryService();
 const s3Service = new S3Service();
@@ -198,9 +198,9 @@ async function generateSingleReadSampleSheetCsv(
             throw new InvalidRequestError(`Single read sample file not found: ${r1.Key}`);
           }
 
-          return `${uploadedFilePair.SampleId}, s3://${r1.Bucket}/${r1.Key}, `; // CSV Sample-Sheet row
+          return `${uploadedFilePair.SampleId},s3://${r1.Bucket}/${r1.Key},`; // CSV Sample-Sheet row
         } else {
-          return `${uploadedFilePair.SampleId}, s3://${r1.Bucket}/${r1.Key}, `; // CSV Sample-Sheet row
+          return `${uploadedFilePair.SampleId},s3://${r1.Bucket}/${r1.Key},`; // CSV Sample-Sheet row
         }
       }),
     )
@@ -270,9 +270,9 @@ async function generatePairedReadsSampleSheetCsv(
             throw new InvalidRequestError(`Paired read R2 sample file not found: ${r2.Key}`);
           }
 
-          return `${uploadedFilePair.SampleId}, s3://${r1.Bucket}/${r1.Key}, s3://${r2.Bucket}/${r2.Key}`; // CSV Sample-Sheet row
+          return `${uploadedFilePair.SampleId},s3://${r1.Bucket}/${r1.Key},s3://${r2.Bucket}/${r2.Key}`; // CSV Sample-Sheet row
         } else {
-          return `${uploadedFilePair.SampleId}, s3://${r1.Bucket}/${r1.Key}, s3://${r2.Bucket}/${r2.Key}`; // CSV Sample-Sheet row
+          return `${uploadedFilePair.SampleId},s3://${r1.Bucket}/${r1.Key},s3://${r2.Bucket}/${r2.Key}`; // CSV Sample-Sheet row
         }
       }),
     )
