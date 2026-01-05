@@ -87,7 +87,7 @@
     "@vueuse/integrations": "^10.11.1",
     "@vueuse/nuxt": "^11.3.0",
     "amazon-cognito-identity-js": "^6.3.15",
-    "aws-amplify": "5.3.18",
+    "aws-amplify": "6.0.0",
     "aws-cdk-lib": "^2.176.0",
     "axios": "^1.8.4",
     "cdk-nag": "^2.35.67",
