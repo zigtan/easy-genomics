@@ -71,7 +71,7 @@
     "vue-eslint-parser": "^9.4.3"
   },
   "dependencies": {
-    "@aws-amplify/ui-vue": "3.1.30",
+    "@aws-amplify/ui-vue": "4.3.8",
     "@aws-sdk/client-omics": "^3.782.0",
     "@aws-sdk/client-s3": "^3.782.0",
     "@aws-sdk/s3-request-presigner": "^3.782.0",
@@ -99,7 +99,7 @@
     "esrun": "^3.2.26",
     "file-saver": "^2.0.5",
     "jwt-decode": "^4.0.0",
-    "nuxt": "3.15.2",
+    "nuxt": "3.20.0",
     "pinia": "^2.3.1",
     "pinia-plugin-persistedstate": "4.2.0",
     "playwright": "^1.51.1",
